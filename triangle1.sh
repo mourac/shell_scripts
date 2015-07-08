@@ -5,7 +5,7 @@ do
 	for ((j=1; j<=i; j++))
 	do
 		printf "$STR";
-	done
+	done 
 	printf "\n";
 	
 done
