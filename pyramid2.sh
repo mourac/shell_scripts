@@ -1,13 +1,12 @@
-n=$1;
-for((i=1;i<=n;i++))
+; row++))
 do
-	for ((k=i;k<=n;k++))
-	do
-		echo -ne " ";
-	done
-	for ((j=1;j<=2*i-1;j++))
-	do
-		echo -ne "*"
-	done
-echo;
-done
+        for ((spaces=row;spaces>=NUMBER;spaces--))
+        do
+                echo -ne " "
+        done
+        for ((i=1;i>=row; i--))
+        do
+                echo -ne "$STR"
+        done
+        echo
+
