@@ -1,0 +1,402 @@
+NOTE: Running simulator using application built within Xcode
+INFO: calabash launching app -> '/Users/rimarsh/Library/Developer/Xcode/DerivedData/WebExSquared-bwpxbnujwcimqlewgcksiifhdwfn/Build/Products/Debug-iphonesimulator/WebExSquaredIntegrationTests.app'
+/Users/rimarsh/dev/wx2-ios-client/features/support/test_user.rb:11: warning: already initialized constant DRONES_BASE_URL
+/Users/rimarsh/dev/wx2-ios-client/features/support/test_user.rb:12: warning: already initialized constant HTTP_HEADERS
+/Users/rimarsh/dev/wx2-ios-client/features/support/test_user.rb:177: warning: already initialized constant LOCUS_BASE_URL
+/Users/rimarsh/dev/wx2-ios-client/features/support/test_user.rb:178: warning: already initialized constant HTTP_HEADERS
+/Users/rimarsh/dev/wx2-ios-client/features/support/test_user.rb:210: warning: already initialized constant CONVERSATION_BASE_URL
+/Users/rimarsh/dev/wx2-ios-client/features/support/test_user.rb:211: warning: already initialized constant HTTP_HEADERS
+/Users/rimarsh/dev/wx2-ios-client/features/support/test_user.rb:212: warning: already initialized constant DEFAULT_EMAIL_TEMPLATE
+/Users/rimarsh/dev/wx2-ios-client/features/support/timestamped/adds_timestamp.rb:7: warning: already initialized constant TEST_RUN_START
+/Users/rimarsh/dev/wx2-ios-client/features/support/timestamped/pretty_formatter.rb:5: warning: already initialized constant PrettyFormatter
+Using the default profile...
+Feature: As a user I want the conversation view to look awesome
+
+  Scenario: As a user I want to see the message when a new message arrive           # features/common/conversation.feature:3
+*** Launching instruments for 'As a user I want to see the message when a new message arrive'
+*** Launched instruments and connected calabash for 'As a user I want to see the message when a new message arrive'
+*** Creating test user 'ios-{{id}}@{{domain}}' named 'Test User' with org 'primary'
+*** Created test user took 1.19 seconds
+*** Setting up scenario took 16 seconds
+2015-07-17 16:28:02 -0700: Starting scenario 'As a user I want to see the message when a new message arrive'
+ALERT settings conversation base uri to https://conv-a.wbx2.com/conversation/api/v1
+ALERT setting locus base uri to https://locus-a.wbx2.com/locus/api/v1
+ALERT setting allow http to NO
+Logging into with a display name of Test User
+ALERT setting authorization token to NzcyODJjYWItYTE5Zi00ZTc3LTk2MzgtOGIwMWUyZmViOGExZTY4Njc2ZDItYWMw for ios-7aab681383534e53a8ec6f1e6ed1c4e9@wx2.example.com
+ALERT setting refresh token to ZWU3N2YwZDgtNWRhNC00NTI4LTg1MzctYzk2ODRkMjE2ZTkxODVlZTk1ZDUtZGVk for ios-7aab681383534e53a8ec6f1e6ed1c4e9@wx2.example.com
+Opened websocket connection for user ios-7aab681383534e53a8ec6f1e6ed1c4e9@wx2.example.com at wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/7851cd88-0f34-4f05-8488-eb7615833bee/messages
+    Given I am authenticated as a test user                                         # features/step_definitions/user_steps.rb:8
+*** Creating test user 'ios-{{id}}@{{domain}}' named 'benoit' with org 'primary'
+*** Created test user took 0.66 seconds
+Opened websocket connection for user ios-d30f0c301eb94814af813bab54d5410e@wx2.example.com at wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/1fe98e48-96cb-4f2e-967b-503b5442df7a/messages
+    Given I start with an existing conversation with "benoit" named "conversation1" # features/step_definitions/conversation_creation_steps.rb:173
+      Expecting 1 conversations
+    Then I touch conversation number 1                                              # features/step_definitions/conversation_steps.rb:21
+    Then "benoit" sends "I am here" to conversation "conversation1"                 # features/step_definitions/conversation_steps.rb:256
+    Then I see the message "I am here"                                              # features/step_definitions/conversation_steps.rb:187
+Waiting for logout to complete
+*** Finishing scenario took 8 seconds
+*** Scenario 'As a user I want to see the message when a new message arrive' has tags []
+*** Deleting test user: ios-7aab681383534e53a8ec6f1e6ed1c4e9@wx2.example.com
+*** Deleted test user took 0.66 seconds
+*** Deleting test user: ios-d30f0c301eb94814af813bab54d5410e@wx2.example.com
+*** Deleted test user took 0.52 seconds
+*** Cleanup scenario took 2 seconds
+
+  Scenario: As a user I want to see the last message of a conversation when I open it # features/common/conversation.feature:10
+*** Launching instruments for 'As a user I want to see the last message of a conversation when I open it'
+*** Launched instruments and connected calabash for 'As a user I want to see the last message of a conversation when I open it'
+*** Creating test user 'ios-{{id}}@{{domain}}' named 'Test User' with org 'primary'
+*** Created test user took 0.73 seconds
+*** Setting up scenario took 15 seconds
+2015-07-17 16:28:28 -0700: Starting scenario 'As a user I want to see the last message of a conversation when I open it'
+ALERT settings conversation base uri to https://conv-a.wbx2.com/conversation/api/v1
+ALERT setting locus base uri to https://locus-a.wbx2.com/locus/api/v1
+ALERT setting allow http to NO
+Logging into with a display name of Test User
+ALERT setting authorization token to ZDhmODYwOGItOGMxMS00NzM3LTgyMzgtMTA4YTYzZmQ4MTQzMWYwYzcwYTUtNGI5 for ios-c5b587e0e01841daa162a29fec33dfa5@wx2.example.com
+ALERT setting refresh token to YTE3NjIwNGUtMTQxOC00ODNkLWFjZmQtNGNhNWVmMzg3NWNmMTAwZmE0ZWYtMjM0 for ios-c5b587e0e01841daa162a29fec33dfa5@wx2.example.com
+Opened websocket connection for user ios-c5b587e0e01841daa162a29fec33dfa5@wx2.example.com at wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/8cd3a5e7-3aee-417f-9817-001ff885962e/messages
+    Given I am authenticated as a test user                                           # features/step_definitions/user_steps.rb:8
+*** Creating test user 'ios-{{id}}@{{domain}}' named 'benoit' with org 'primary'
+*** Created test user took 0.73 seconds
+Opened websocket connection for user ios-b27fc5a0bca04677b2d241ca6d84acbd@wx2.example.com at wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/3667bbe8-13a6-40a5-a618-5a46bda5cfd5/messages
+    Given I start with an existing conversation with "benoit" named "conversation1"   # features/step_definitions/conversation_creation_steps.rb:173
+      Expecting 1 conversations
+    Then "benoit" sends "message 1" to conversation "conversation1"                   # features/step_definitions/conversation_steps.rb:256
+    Then "benoit" sends "message 2" to conversation "conversation1"                   # features/step_definitions/conversation_steps.rb:256
+    Then "benoit" sends "message 3" to conversation "conversation1"                   # features/step_definitions/conversation_steps.rb:256
+    Then "benoit" sends "message 4" to conversation "conversation1"                   # features/step_definitions/conversation_steps.rb:256
+    Then "benoit" sends "message 5" to conversation "conversation1"                   # features/step_definitions/conversation_steps.rb:256
+    Then "benoit" sends "message 6" to conversation "conversation1"                   # features/step_definitions/conversation_steps.rb:256
+    Then "benoit" sends "message 7" to conversation "conversation1"                   # features/step_definitions/conversation_steps.rb:256
+    Then "benoit" sends "message 8" to conversation "conversation1"                   # features/step_definitions/conversation_steps.rb:256
+    Then "benoit" sends "message 9" to conversation "conversation1"                   # features/step_definitions/conversation_steps.rb:256
+    Then "benoit" sends "message a" to conversation "conversation1"                   # features/step_definitions/conversation_steps.rb:256
+    Then "benoit" sends "message b" to conversation "conversation1"                   # features/step_definitions/conversation_steps.rb:256
+    Then "benoit" sends "message c" to conversation "conversation1"                   # features/step_definitions/conversation_steps.rb:256
+    Then "benoit" sends "message d" to conversation "conversation1"                   # features/step_definitions/conversation_steps.rb:256
+    Then "benoit" sends "message e" to conversation "conversation1"                   # features/step_definitions/conversation_steps.rb:256
+    Then "benoit" sends "message f" to conversation "conversation1"                   # features/step_definitions/conversation_steps.rb:256
+    Then do nothing for 5 seconds                                                     # features/step_definitions/misc_steps.rb:129
+    Then I touch conversation number 1                                                # features/step_definitions/conversation_steps.rb:21
+    Then I see the message "message f"                                                # features/step_definitions/conversation_steps.rb:187
+Waiting for logout to complete
+*** Finishing scenario took 26 seconds
+*** Scenario 'As a user I want to see the last message of a conversation when I open it' has tags []
+*** Deleting test user: ios-c5b587e0e01841daa162a29fec33dfa5@wx2.example.com
+*** Deleted test user took 0.45 seconds
+*** Deleting test user: ios-b27fc5a0bca04677b2d241ca6d84acbd@wx2.example.com
+*** Deleted test user took 0.45 seconds
+*** Cleanup scenario took 1 seconds
+
+  Scenario: As a user I want to see the conversation title change when another user changes it # features/common/conversation.feature:32
+*** Launching instruments for 'As a user I want to see the conversation title change when another user changes it'
+*** Launched instruments and connected calabash for 'As a user I want to see the conversation title change when another user changes it'
+*** Creating test user 'ios-{{id}}@{{domain}}' named 'Test User' with org 'primary'
+*** Created test user took 0.74 seconds
+*** Setting up scenario took 8 seconds
+2015-07-17 16:29:06 -0700: Starting scenario 'As a user I want to see the conversation title change when another user changes it'
+ALERT settings conversation base uri to https://conv-a.wbx2.com/conversation/api/v1
+ALERT setting locus base uri to https://locus-a.wbx2.com/locus/api/v1
+ALERT setting allow http to NO
+Logging into with a display name of Test User
+ALERT setting authorization token to OGMyNGViNmUtZDEzZS00MDY2LTk1NzEtYjYzNTk1MTg5YjljYTdkN2UzNjMtYTdl for ios-6b04e96b0c42430182fb068357231e8d@wx2.example.com
+ALERT setting refresh token to Mzg1ZmYxZWMtMmM2NS00MGIzLThiMTAtNjMxODU1NGQ5NThmOTQyZTRiODAtOTFl for ios-6b04e96b0c42430182fb068357231e8d@wx2.example.com
+Opened websocket connection for user ios-6b04e96b0c42430182fb068357231e8d@wx2.example.com at wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/882ae86a-6653-40ef-9ae6-94b5c1a8287f/messages
+    Given I am authenticated as a test user                                                    # features/step_definitions/user_steps.rb:8
+*** Creating test user 'ios-{{id}}@{{domain}}' named 'benoit' with org 'primary'
+*** Created test user took 0.65 seconds
+Opened websocket connection for user ios-1fd972d338fb47ebbde1522ae2c9d835@wx2.example.com at wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/2d11cca0-856e-4197-a034-ee9361a47087/messages
+    Given I start with an existing conversation with "benoit" named "conversation1"            # features/step_definitions/conversation_creation_steps.rb:173
+      Expecting 1 conversations
+    Then "benoit" changes the title of conversation "conversation1" to "talking to benoit"     # features/step_definitions/conversation_steps.rb:648
+    Then I wait to see text containing "talking to benoit"                                     # features/step_definitions/ui_steps.rb:93
+Waiting for logout to complete
+*** Finishing scenario took 7 seconds
+*** Scenario 'As a user I want to see the conversation title change when another user changes it' has tags []
+*** Deleting test user: ios-6b04e96b0c42430182fb068357231e8d@wx2.example.com
+*** Deleted test user took 0.45 seconds
+*** Deleting test user: ios-1fd972d338fb47ebbde1522ae2c9d835@wx2.example.com
+*** Deleted test user took 0.44 seconds
+*** Cleanup scenario took 1 seconds
+
+  Scenario: As a user I want to see the encrypted conversation title change when another user changes it          # features/common/conversation.feature:38
+*** Launching instruments for 'As a user I want to see the encrypted conversation title change when another user changes it'
+*** Launched instruments and connected calabash for 'As a user I want to see the encrypted conversation title change when another user changes it'
+*** Creating test user 'ios-{{id}}@{{domain}}' named 'Test User' with org 'primary'
+*** Created test user took 0.82 seconds
+*** Setting up scenario took 9 seconds
+2015-07-17 16:29:25 -0700: Starting scenario 'As a user I want to see the encrypted conversation title change when another user changes it'
+ALERT settings conversation base uri to https://conv-a.wbx2.com/conversation/api/v1
+ALERT setting locus base uri to https://locus-a.wbx2.com/locus/api/v1
+ALERT setting allow http to NO
+Logging into with a display name of Test User
+ALERT setting authorization token to ZjAwZDEyYTQtZTViMy00YjBmLThlZTgtZjUzY2E3NDYwYTk4ZGE2NTU2MTUtOWU4 for ios-a2c218f088dd4323927a4fed47692317@wx2.example.com
+ALERT setting refresh token to YTY4MGQ3ZDUtNDY3YS00YmU0LWEzZjktNjI5NjY4OTc5MzQxMzFmMDQ2MWEtOTZl for ios-a2c218f088dd4323927a4fed47692317@wx2.example.com
+Opened websocket connection for user ios-a2c218f088dd4323927a4fed47692317@wx2.example.com at wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/0f01bdc5-bca3-4292-9507-8a25b6983756/messages
+    Given I am authenticated as a test user                                                                       # features/step_definitions/user_steps.rb:8
+*** Creating test user 'ios-{{id}}@{{domain}}' named 'benoit' with org 'primary'
+*** Created test user took 0.7 seconds
+Opened websocket connection for user ios-f50cd4a8d02141cd986ae0ac64b995b2@wx2.example.com at wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/fc6427fe-13fc-4aae-a35e-fc8a169031b9/messages
+    Then "benoit" starts with an encrypted conversation with "me" named "conversation1" and message "dude"        # features/step_definitions/end_to_end_encryption_steps.rb:18
+      message: dude
+      encryption_key_url: https://encryption-a.wbx2.com/encryption/api/v1/keys/d6c7b80f-62ca-4e3e-acda-c939c9c517d2
+      encryption_key_value: {"kty"=>"oct", "k"=>"HfjWQrrU4qUUQlJAUBQh82A0OU1IWEFTrMvtiLXcP4g", "kid"=>"https://encryption-a.wbx2.com/encryption/api/v1/keys/d6c7b80f-62ca-4e3e-acda-c939c9c517d2"}
+      encrypted message: eyAiYWxnIjogImRpciIsICJlbmMiOiAiQTI1NkdDTSIsICJraWQiOiAiaHR0cHM6XC9cL2VuY3J5cHRpb24tYS53YngyLmNvbVwvZW5jcnlwdGlvblwvYXBpXC92MVwva2V5c1wvZDZjN2I4MGYtNjJjYS00ZTNlLWFjZGEtYzkzOWM5YzUxN2QyIiB9..CjSGJuNngCIy7kXE.meB_gQ.DfGIHrZOseGqDxPLMj4S8A
+    Then I touch conversation number 1                                                                            # features/step_definitions/conversation_steps.rb:21
+    Then "benoit" changes the encrypted title of conversation "conversation1" to "encryptingly talking to benoit" # features/step_definitions/conversation_steps.rb:657
+      encryption key: {"keyUrl"=>"https://encryption-a.wbx2.com/encryption/api/v1/keys/d6c7b80f-62ca-4e3e-acda-c939c9c517d2", "keyValue"=>{"kty"=>"oct", "k"=>"HfjWQrrU4qUUQlJAUBQh82A0OU1IWEFTrMvtiLXcP4g", "kid"=>"https://encryption-a.wbx2.com/encryption/api/v1/keys/d6c7b80f-62ca-4e3e-acda-c939c9c517d2"}, "resources"=>[], "authorizations"=>[]}
+      encrypted message: eyAiYWxnIjogImRpciIsICJlbmMiOiAiQTI1NkdDTSIsICJraWQiOiAiaHR0cHM6XC9cL2VuY3J5cHRpb24tYS53YngyLmNvbVwvZW5jcnlwdGlvblwvYXBpXC92MVwva2V5c1wvZDZjN2I4MGYtNjJjYS00ZTNlLWFjZGEtYzkzOWM5YzUxN2QyIiB9..jTqR68_8fOwzROKW.y0dgOfo59UG1lnkQ7upJ7EI2y8x03UulnDhwrjqS.PLTi8q24VDR0j9OOEYILBA
+    Then I wait to see text containing "encryptingly talking to benoit"                                           # features/step_definitions/ui_steps.rb:93
+Waiting for logout to complete
+*** Finishing scenario took 9 seconds
+*** Scenario 'As a user I want to see the encrypted conversation title change when another user changes it' has tags []
+*** Deleting test user: ios-a2c218f088dd4323927a4fed47692317@wx2.example.com
+*** Deleted test user took 0.5 seconds
+*** Deleting test user: ios-f50cd4a8d02141cd986ae0ac64b995b2@wx2.example.com
+*** Deleted test user took 0.44 seconds
+*** Cleanup scenario took 1 seconds
+
+  Scenario: As a user I want to see the muted status for a specific conversation                  # features/common/conversation.feature:45
+*** Launching instruments for 'As a user I want to see the muted status for a specific conversation'
+*** Launched instruments and connected calabash for 'As a user I want to see the muted status for a specific conversation'
+*** Creating test user 'ios-{{id}}@{{domain}}' named 'Test User' with org 'primary'
+*** Created test user took 0.73 seconds
+*** Setting up scenario took 8 seconds
+2015-07-17 16:29:44 -0700: Starting scenario 'As a user I want to see the muted status for a specific conversation'
+ALERT settings conversation base uri to https://conv-a.wbx2.com/conversation/api/v1
+ALERT setting locus base uri to https://locus-a.wbx2.com/locus/api/v1
+ALERT setting allow http to NO
+Logging into with a display name of Test User
+ALERT setting authorization token to ZGEwZDFkYmMtYWUyMS00ZmZlLTg0ZTQtNTMyZGEyNTIyNDM5ZTkwZGVkNzYtMmM4 for ios-8eae062dec4f4c0a93acda70904710fe@wx2.example.com
+ALERT setting refresh token to NWVkZWUzODMtMDlkZC00YTgyLTg2ZjYtYTI3MWNkZmQwZDNhZDYzNmY1MjYtNDhk for ios-8eae062dec4f4c0a93acda70904710fe@wx2.example.com
+Opened websocket connection for user ios-8eae062dec4f4c0a93acda70904710fe@wx2.example.com at wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/5c65981e-74d9-412a-babe-306880f726d8/messages
+    Given I am authenticated as a test user                                                       # features/step_definitions/user_steps.rb:8
+*** Creating test user 'ios-{{id}}@{{domain}}' named 'benoit' with org 'primary'
+*** Created test user took 0.61 seconds
+Opened websocket connection for user ios-89efaf2af03b4fc2b6cabaa057898e0d@wx2.example.com at wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/93e46c5d-56c2-409a-803e-37bccc22c82e/messages
+    Given I start with an existing conversation with "benoit" named "conversation1"               # features/step_definitions/conversation_creation_steps.rb:173
+      Expecting 1 conversations
+    Then I flick left on cell number 1 in table view "conversationsListView" and click on "Mute"  # features/step_definitions/misc_steps.rb:357
+    Then I wait to see an alert view with title "Notifications Muted"                             # features/step_definitions/misc_steps.rb:49
+    Then I touch "OK" on the alert view                                                           # features/step_definitions/misc_steps.rb:61
+    Then I do nothing for 1 second                                                                # features/step_definitions/misc_steps.rb:129
+    Then I should see 1 muted conversations                                                       # features/step_definitions/conversation_steps.rb:697
+    Then I flick left on cell number 1 in table view "conversationsListView" and click on "Muted" # features/step_definitions/misc_steps.rb:357
+    Then I should see 0 muted conversations                                                       # features/step_definitions/conversation_steps.rb:697
+Waiting for logout to complete
+*** Finishing scenario took 18 seconds
+*** Scenario 'As a user I want to see the muted status for a specific conversation' has tags []
+*** Deleting test user: ios-8eae062dec4f4c0a93acda70904710fe@wx2.example.com
+*** Deleted test user took 0.52 seconds
+*** Deleting test user: ios-89efaf2af03b4fc2b6cabaa057898e0d@wx2.example.com
+*** Deleted test user took 0.46 seconds
+*** Cleanup scenario took 1 seconds
+
+  Scenario: As a user I should be able to leave a conversation                                    # features/common/conversation.feature:58
+*** Launching instruments for 'As a user I should be able to leave a conversation'
+*** Launched instruments and connected calabash for 'As a user I should be able to leave a conversation'
+*** Creating test user 'ios-{{id}}@{{domain}}' named 'Test User' with org 'primary'
+*** Created test user took 0.92 seconds
+*** Setting up scenario took 8 seconds
+2015-07-17 16:30:13 -0700: Starting scenario 'As a user I should be able to leave a conversation'
+ALERT settings conversation base uri to https://conv-a.wbx2.com/conversation/api/v1
+ALERT setting locus base uri to https://locus-a.wbx2.com/locus/api/v1
+ALERT setting allow http to NO
+Logging into with a display name of Test User
+ALERT setting authorization token to YmJhNGFkOTktZDg2YS00N2ZiLWE2NjEtNDNlN2MxNWUyMzQ0MjVmMDA2NmEtZmMx for ios-b7289eaebd914b4188d5fdaa583b0a80@wx2.example.com
+ALERT setting refresh token to YmVjMDc1Y2MtMTQ4OC00OWQ5LWFkZDgtMjg0MTkxOTM2ODk5ZGI1OTY1ZmYtM2M3 for ios-b7289eaebd914b4188d5fdaa583b0a80@wx2.example.com
+Opened websocket connection for user ios-b7289eaebd914b4188d5fdaa583b0a80@wx2.example.com at wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/d8bb11f2-dbe3-4ee2-8cc9-d065a5b8be7d/messages
+    Given I am authenticated as a test user                                                       # features/step_definitions/user_steps.rb:8
+*** Creating test user 'ios-{{id}}@{{domain}}' named 'benoit' with org 'primary'
+*** Created test user took 0.78 seconds
+Opened websocket connection for user ios-0dc1784b999740f48706e2f3fba8c885@wx2.example.com at wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/dda556e9-d49e-4055-951a-42d2c0c715ee/messages
+    Given I start with an existing conversation with "benoit" named "conversation1"               # features/step_definitions/conversation_creation_steps.rb:173
+      Expecting 1 conversations
+    Then I flick left on cell number 1 in table view "conversationsListView" and click on "Leave" # features/step_definitions/misc_steps.rb:357
+    Then I wait to see an alert view with title "Leave Room"                                      # features/step_definitions/misc_steps.rb:49
+    Then I touch "OK" on the alert view                                                           # features/step_definitions/misc_steps.rb:61
+    Then I do nothing for 1 second                                                                # features/step_definitions/misc_steps.rb:129
+    Then I see 0 conversations on the home screen                                                 # features/step_definitions/conversation_steps.rb:35
+Waiting for logout to complete
+*** Finishing scenario took 14 seconds
+*** Scenario 'As a user I should be able to leave a conversation' has tags []
+*** Deleting test user: ios-b7289eaebd914b4188d5fdaa583b0a80@wx2.example.com
+*** Deleted test user took 0.44 seconds
+*** Deleting test user: ios-0dc1784b999740f48706e2f3fba8c885@wx2.example.com
+*** Deleted test user took 0.49 seconds
+*** Cleanup scenario took 1 seconds
+
+  Scenario: As a user I should be able to leave a conversation if I am the last one               # features/common/conversation.feature:67
+*** Launching instruments for 'As a user I should be able to leave a conversation if I am the last one'
+*** Launched instruments and connected calabash for 'As a user I should be able to leave a conversation if I am the last one'
+*** Creating test user 'ios-{{id}}@{{domain}}' named 'Test User' with org 'primary'
+*** Created test user took 0.76 seconds
+*** Setting up scenario took 9 seconds
+2015-07-17 16:30:39 -0700: Starting scenario 'As a user I should be able to leave a conversation if I am the last one'
+ALERT settings conversation base uri to https://conv-a.wbx2.com/conversation/api/v1
+ALERT setting locus base uri to https://locus-a.wbx2.com/locus/api/v1
+ALERT setting allow http to NO
+Logging into with a display name of Test User
+ALERT setting authorization token to NDgxMWYzOWItYThiNS00OWY5LWFkNmYtZmJkZjNmZTMxZDczMDM4ZmY1YjQtYTBm for ios-86066d05ef1c486799b1161a5add9acd@wx2.example.com
+ALERT setting refresh token to ZmZmODI0MWEtNjY2Yy00NTE5LThhZjktMDJkZGNjMzkxNDA1OGQ5Yjc3ZDQtNTJk for ios-86066d05ef1c486799b1161a5add9acd@wx2.example.com
+Opened websocket connection for user ios-86066d05ef1c486799b1161a5add9acd@wx2.example.com at wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/df03cf24-7622-431a-a8e5-5705fccba4fd/messages
+    Given I am authenticated as a test user                                                       # features/step_definitions/user_steps.rb:8
+*** Creating test user 'ios-{{id}}@{{domain}}' named 'benoit' with org 'primary'
+*** Created test user took 0.86 seconds
+Opened websocket connection for user ios-cbc4f5d204184fefaacd8194481ee188@wx2.example.com at wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/6f0d971d-81d5-40c7-996e-4b827dddf923/messages
+*** Creating test user 'ios-{{id}}@{{domain}}' named 'bobby' with org 'primary'
+*** Created test user took 0.68 seconds
+Opened websocket connection for user ios-1701f952591146e5bb3e9290a65b1a1e@wx2.example.com at wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/420b5eef-f4e4-4225-8564-ffeec78fa69a/messages
+    Given I start with an existing conversation with "benoit, bobby" named "conversation1"        # features/step_definitions/conversation_creation_steps.rb:173
+      Expecting 1 conversations
+    Then "benoit" leaves conversation "conversation1"                                             # features/step_definitions/conversation_steps.rb:708
+    Then "bobby" leaves conversation "conversation1"                                              # features/step_definitions/conversation_steps.rb:708
+    Then I touch conversation number 1                                                            # features/step_definitions/conversation_steps.rb:21
+    Then I touch the conversation details button                                                  # features/step_definitions/conversation_steps.rb:632
+    Then I see 1 participants listed                                                              # features/step_definitions/room_details_steps.rb:3
+    Then I hit back                                                                               # features/step_definitions/ui_steps.rb:207
+    Then I hit back                                                                               # features/step_definitions/ui_steps.rb:207
+    Then I flick left on cell number 1 in table view "conversationsListView" and click on "Leave" # features/step_definitions/misc_steps.rb:357
+    Then I wait to see an alert view with title "Leave Room"                                      # features/step_definitions/misc_steps.rb:49
+    Then I touch "OK" on the alert view                                                           # features/step_definitions/misc_steps.rb:61
+    Then I do nothing for 1 second                                                                # features/step_definitions/misc_steps.rb:129
+    Then I see 0 conversations on the home screen                                                 # features/step_definitions/conversation_steps.rb:35
+Waiting for logout to complete
+*** Finishing scenario took 21 seconds
+*** Scenario 'As a user I should be able to leave a conversation if I am the last one' has tags []
+*** Deleting test user: ios-86066d05ef1c486799b1161a5add9acd@wx2.example.com
+*** Deleted test user took 0.56 seconds
+*** Deleting test user: ios-cbc4f5d204184fefaacd8194481ee188@wx2.example.com
+*** Deleted test user took 0.47 seconds
+*** Deleting test user: ios-1701f952591146e5bb3e9290a65b1a1e@wx2.example.com
+*** Deleted test user took 0.5 seconds
+*** Cleanup scenario took 2 seconds
+
+  Scenario: As a user I should be able to leave a one on one and my conversation comes back when I am messaged # features/common/conversation.feature:84
+*** Launching instruments for 'As a user I should be able to leave a one on one and my conversation comes back when I am messaged'
+*** Launched instruments and connected calabash for 'As a user I should be able to leave a one on one and my conversation comes back when I am messaged'
+*** Creating test user 'ios-{{id}}@{{domain}}' named 'Test User' with org 'primary'
+*** Created test user took 0.66 seconds
+*** Setting up scenario took 15 seconds
+2015-07-17 16:31:19 -0700: Starting scenario 'As a user I should be able to leave a one on one and my conversation comes back when I am messaged'
+ALERT settings conversation base uri to https://conv-a.wbx2.com/conversation/api/v1
+ALERT setting locus base uri to https://locus-a.wbx2.com/locus/api/v1
+ALERT setting allow http to NO
+Logging into with a display name of Test User
+ALERT setting authorization token to NmNkNGM0MGYtZTczNS00MzBkLTlhYmEtYzZmMmFiNWI2MDgzMTBmN2ZmNWYtODYx for ios-cae19d4103c34636bc7345b06e9064b2@wx2.example.com
+ALERT setting refresh token to Zjk1ZTBlYWUtNGE3YS00OTEzLTg2NDgtN2RlMTJkMDVkZWI3MWE4N2QyMmQtMWJk for ios-cae19d4103c34636bc7345b06e9064b2@wx2.example.com
+Opened websocket connection for user ios-cae19d4103c34636bc7345b06e9064b2@wx2.example.com at wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/300faeff-6a7b-4331-9466-abcbabcd6846/messages
+    Given I am authenticated as a test user                                                                    # features/step_definitions/user_steps.rb:8
+*** Creating test user 'ios-{{id}}@{{domain}}' named 'bobby' with org 'primary'
+*** Created test user took 0.73 seconds
+Opened websocket connection for user ios-e360abfbd26d46ffb8552955e99635c8@wx2.example.com at wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/627d554b-64bf-4e3f-8555-313439b6690c/messages
+    Then I start a new conversation "conversation1" with participants "bobby" and message "hello1"             # features/step_definitions/conversation_creation_steps.rb:28
+    Then I flick left on cell number 1 in table view "conversationsListView" and click on "Leave"              # features/step_definitions/misc_steps.rb:357
+    Then I do nothing for 1 second                                                                             # features/step_definitions/misc_steps.rb:129
+    Then I see 0 conversations on the home screen                                                              # features/step_definitions/conversation_steps.rb:35
+    Then "bobby" sends "hello2" to conversation "conversation1"                                                # features/step_definitions/conversation_steps.rb:256
+    Then I see 1 conversations on the home screen                                                              # features/step_definitions/conversation_steps.rb:35
+    Then I touch conversation number 1                                                                         # features/step_definitions/conversation_steps.rb:21
+    Then I touch the conversation details button                                                               # features/step_definitions/conversation_steps.rb:632
+    Then I should see the "personsNameLabel" label with text "bobby"                                           # features/step_definitions/ui_steps.rb:121
+    Then I hit back                                                                                            # features/step_definitions/ui_steps.rb:207
+    Then I see the message "hello1"                                                                            # features/step_definitions/conversation_steps.rb:187
+Waiting for logout to complete
+*** Finishing scenario took 30 seconds
+*** Scenario 'As a user I should be able to leave a one on one and my conversation comes back when I am messaged' has tags []
+*** Deleting test user: ios-cae19d4103c34636bc7345b06e9064b2@wx2.example.com
+*** Deleted test user took 0.44 seconds
+*** Deleting test user: ios-e360abfbd26d46ffb8552955e99635c8@wx2.example.com
+*** Deleted test user took 0.49 seconds
+*** Cleanup scenario took 2 seconds
+
+  Scenario: As a user I should see when others leave a conversation                 # features/common/conversation.feature:99
+*** Launching instruments for 'As a user I should see when others leave a conversation'
+*** Launched instruments and connected calabash for 'As a user I should see when others leave a conversation'
+*** Creating test user 'ios-{{id}}@{{domain}}' named 'Test User' with org 'primary'
+*** Created test user took 0.83 seconds
+*** Setting up scenario took 8 seconds
+2015-07-17 16:32:00 -0700: Starting scenario 'As a user I should see when others leave a conversation'
+ALERT settings conversation base uri to https://conv-a.wbx2.com/conversation/api/v1
+ALERT setting locus base uri to https://locus-a.wbx2.com/locus/api/v1
+ALERT setting allow http to NO
+Logging into with a display name of Test User
+ALERT setting authorization token to YzQ2NzFmZDMtNTE2MC00MDBhLTkxYzgtYzVjOWY3ZWQ0YmUyNDk5N2EzZmMtY2Iy for ios-5dd42fcee627418ca928c10556975733@wx2.example.com
+ALERT setting refresh token to ZDYyNzRiNDQtNGQ4ZS00ODYyLTgxYWQtMDFlNTEzNGQ1MjY5NTRlM2NlYmYtMWZi for ios-5dd42fcee627418ca928c10556975733@wx2.example.com
+Opened websocket connection for user ios-5dd42fcee627418ca928c10556975733@wx2.example.com at wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/0a454e7a-b870-4309-b073-d2325b1253e7/messages
+    Given I am authenticated as a test user                                         # features/step_definitions/user_steps.rb:8
+*** Creating test user 'ios-{{id}}@{{domain}}' named 'benoit' with org 'primary'
+*** Created test user took 0.7 seconds
+Opened websocket connection for user ios-975bcdfbd61343c29d02364a511495b7@wx2.example.com at wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/8e18f749-7797-4424-b714-971baf6a837f/messages
+    Given I start with an existing conversation with "benoit" named "conversation1" # features/step_definitions/conversation_creation_steps.rb:173
+      Expecting 1 conversations
+    Then "benoit" leaves conversation "conversation1"                               # features/step_definitions/conversation_steps.rb:708
+    Then I see 1 conversations on the home screen                                   # features/step_definitions/conversation_steps.rb:35
+    Then I touch conversation number 1                                              # features/step_definitions/conversation_steps.rb:21
+    Then I wait to see text containing "left the room"                              # features/step_definitions/ui_steps.rb:93
+      execution expired (Calabash::Cucumber::WaitHelpers::WaitError)
+      ./features/step_definitions/ui_steps.rb:94:in `/^I wait to see text containing "([^\"]*)"$/'
+      features/common/conversation.feature:105:in `Then I wait to see text containing "left the room"'
+Waiting for logout to complete
+*** Finishing scenario took 39 seconds
+*** Scenario 'As a user I should see when others leave a conversation' has tags []
+*** Deleting test user: ios-5dd42fcee627418ca928c10556975733@wx2.example.com
+*** Deleted test user took 0.53 seconds
+*** Deleting test user: ios-975bcdfbd61343c29d02364a511495b7@wx2.example.com
+*** Deleted test user took 0.5 seconds
+Failing... features/common/conversation.feature:99
+*** Cleanup scenario took 1 seconds
+
+  @rerunnable
+  Scenario: As a user I want to see the last 20 messages on the conversation detail and have them auto-unfold on scrolling up # features/common/conversation.feature:108
+*** Launching instruments for 'As a user I want to see the last 20 messages on the conversation detail and have them auto-unfold on scrolling up'
+*** Launched instruments and connected calabash for 'As a user I want to see the last 20 messages on the conversation detail and have them auto-unfold on scrolling up'
+*** Creating test user 'ios-{{id}}@{{domain}}' named 'Test User' with org 'primary'
+*** Created test user took 0.7 seconds
+*** Setting up scenario took 8 seconds
+2015-07-17 16:32:50 -0700: Starting scenario 'As a user I want to see the last 20 messages on the conversation detail and have them auto-unfold on scrolling up'
+ALERT settings conversation base uri to https://conv-a.wbx2.com/conversation/api/v1
+ALERT setting locus base uri to https://locus-a.wbx2.com/locus/api/v1
+ALERT setting allow http to NO
+Logging into with a display name of Test User
+ALERT setting authorization token to ZDE5ZTM4ZDItODc1MS00ZjlhLWFkMGUtNmNmZTU4OTBkNDI0ZDA3NTYzZTYtYjA5 for ios-c69945944ba1477f87a3746f56650401@wx2.example.com
+ALERT setting refresh token to OGI2YjNkZTUtOTIwYS00NGVlLThkZDgtZjI1MDZmMWEyODBmNjA5MjFmMzUtZGI0 for ios-c69945944ba1477f87a3746f56650401@wx2.example.com
+Opened websocket connection for user ios-c69945944ba1477f87a3746f56650401@wx2.example.com at wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/4fdfdac3-0b11-4865-9eca-700835452abe/messages
+    Given I am authenticated as a test user                                                                                   # features/step_definitions/user_steps.rb:8
+*** Creating test user 'ios-{{id}}@{{domain}}' named 'benoit' with org 'primary'
+*** Created test user took 0.81 seconds
+Opened websocket connection for user ios-80e2691a07724bb0ab2450d7af8b1872@wx2.example.com at wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/fa321b24-0c86-439d-91be-9bec916a6ca1/messages
+    Then I start a new conversation "conversation2" with participants "benoit" and message "hello"                            # features/step_definitions/conversation_creation_steps.rb:28
+    Then "benoit" and I send 23 messages with ascending numbers to conversation "conversation2"                               # features/step_definitions/conversation_steps.rb:352
+*** Creating test user 'ios-{{id}}@{{domain}}' named 'bobby' with org 'primary'
+*** Created test user took 0.77 seconds
+Opened websocket connection for user ios-7cc57202053c413983f170ea7e26d147@wx2.example.com at wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/8223595a-db65-43f3-b607-71981efa961f/messages
+    Then I start a new conversation "conversation1" with participants "bobby" and message "hello"                             # features/step_definitions/conversation_creation_steps.rb:28
+    Then I touch conversation number 2                                                                                        # features/step_definitions/conversation_steps.rb:21
+    Then I see the message "message 21"                                                                                       # features/step_definitions/conversation_steps.rb:187
+    Then I scroll up on "conversationTableView" until view "conversationTableViewHeader" is shown                             # features/step_definitions/ui_steps.rb:270
+    Then I should not see the message "message 1"                                                                             # features/step_definitions/conversation_steps.rb:221
+    Then do nothing for 2 seconds                                                                                             # features/step_definitions/misc_steps.rb:129
+    Then I scroll up on "conversationTableView"                                                                               # calabash-cucumber-0.14.3/features/step_definitions/calabash_steps.rb:270
+    Then I see the message "message 1"                                                                                        # features/step_definitions/conversation_steps.rb:187
+Waiting for logout to complete
+*** Finishing scenario took 51 seconds
+*** Scenario 'As a user I want to see the last 20 messages on the conversation detail and have them auto-unfold on scrolling up' has tags ["@rerunnable"]
+*** Deleting test user: ios-c69945944ba1477f87a3746f56650401@wx2.example.com
+*** Deleted test user took 0.56 seconds
+*** Deleting test user: ios-80e2691a07724bb0ab2450d7af8b1872@wx2.example.com
+*** Deleted test user took 0.46 seconds
+*** Deleting test user: ios-7cc57202053c413983f170ea7e26d147@wx2.example.com
+*** Deleted test user took 0.46 seconds
+*** Cleanup scenario took 2 seconds
+
+Failing Scenarios:
+cucumber features/common/conversation.feature:99 # Scenario: As a user I should see when others leave a conversation
+cucumber features/common/conversation.feature:168 # Scenario: As a user I want to being added to a room to move it to the top
+
+15 scenarios (2 failed, 13 passed)
+146 steps (2 failed, 4 skipped, 140 passed)
+9m1.345s

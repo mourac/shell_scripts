@@ -12,6 +12,8 @@ else
         DESIRED_TEST_SUITES=$2
         LINES_IN_TESTS=(`wc -l $TESTS_FILE`)
         TESTS_IN_SUITES=`expr $LINES_IN_TESTS / $DESIRED_TEST_SUITES`
-        mkdir suites
+	if [ ! -d "suites" ]; then	
+           mkdir suites
+	fi
         split -l $TESTS_IN_SUITES -d  $TESTS_FILE suites/suite
 fi
