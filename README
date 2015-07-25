@@ -1,0 +1,35 @@
+The included logs.txt file includes timing information for certain phases of a test run.
+
+Examples:
+
+*** Finishing scenario took 8 seconds
+*** Deleted test user took 0.52 seconds
+*** Cleanup scenario took 2 seconds
+
+
+Write a script taking the logs.txt file and calculates the average of each phase.
+
+
+$ ./calculate_duration_stats.rb logs.txt
+
+-----------------------------------------
+                                  Average
+Created test user                     0.8
+Setting up scenario                  10.4
+Finishing scenario                   22.3
+Deleted test user                     0.5
+Cleanup scenario                      1.4
+-----------------------------------------
+
+
+Extra Credit: Adapt script to accept an optional parameter for producing results in JSON
+
+$ ./calculate_duration_stats.rb logs.txt --format=json
+	
+{
+  "Created test user": 0.8,
+  "Setting up scenario": 10.4,
+  "Finishing scenario": 22.3,
+  "Deleted test user": 0.5,
+  "Cleanup scenario": 1.4
+}	
